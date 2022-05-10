@@ -6,11 +6,13 @@ from nltk.sentiment.util import *
 
 def main():
     print("Analyzing Ukraine News Articles via Semantic Analysis")
-    '''https://www.nltk.org/howto/sentiment.html'''
+    # https://www.nltk.org/howto/sentiment.html
+    '''
+    code below is for using your own training and tag set
     n_instances = 100
     subj_docs = [(sent, 'subj') for sent in subjectivity.sents(categories='subj')[:n_instances]]
     obj_docs = [(sent, 'obj') for sent in subjectivity.sents(categories='obj')[:n_instances]]
-    '''Sub out training documents with the BBC politics files'''
+    # Sub out training documents with the BBC politics files
     train_subj_docs = subj_docs[:80]
     test_subj_docs = subj_docs[80:100]
     train_obj_docs = obj_docs[:80]
@@ -28,7 +30,7 @@ def main():
     classifier = sentim_analyzer.train(trainer, training_set)
     for key,value in sorted(sentim_analyzer.evaluate(test_set).items()):
         print('{0}: {1}'.format(key, value))
-
+    '''
     with open("./ukrainepost.txt", encoding="utf8") as file_in:
         post_para = []
         for line in file_in:
