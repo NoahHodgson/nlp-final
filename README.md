@@ -43,11 +43,13 @@ could be done with leaders of both countries. Positive for Zelensky being popula
 for Putin becoming more unpopular. This would also help some of the "prewar" data as well as 
 the postwar, because me calling the one section of data "prewar" is a little misleading as Pro-Russian rebels
 have been fighting in Ukraine since the annexation of Crimea. 
+
 ### Phase 3
 Even if I did not quite get the results I wanted. I decided to take what I have learned and apply it to
 some more articles about Ukraine. I have decided to analyze articles including Zelensky, both with sentences
 mentioning him intact and then also removed to determine how positive the media coverage is in the NYT for him. 
-![Averages from Prewar and Postwar](/results/compareZel.png)
+![Averages from Prewar and Postwar](/results/compareZel1.png) Now if we take the sentences including Zelensky
+out of the articles, we get this. ![Averages from Prewar and Postwar](/results/compareZel2.png)
 
 
 ## Analysis
