@@ -225,7 +225,7 @@ def main():
 
     for art in threePre:
         for sent in art:
-            if "Zelensky" in sent:
+            if "zelensky" in sent:
                 art.remove(sent)
 
     for art in threePost:
