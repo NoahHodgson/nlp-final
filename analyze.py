@@ -1,6 +1,7 @@
 # from nltk.classify import NaiveBayesClassifier
 # from nltk.corpus import subjectivity
 # from nltk.sentiment import SentimentAnalyzer
+from calendar import c
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
 from nltk.sentiment.util import *
 from collections import Counter 
@@ -19,8 +20,9 @@ def main():
             pre_para.append(line.strip().lower())
 
     '''Look into this: https://medium.com/edward-leoni/build-your-own-sentiment-analysis-classifier-with-nltk-ff4bd8744dc0'''
-    prewar={'compound':0, 'neg':0, 'neu':0, 'pos':0}
-    postwar={'compound':0, 'neg':0, 'neu':0, 'pos':0}
+    prewar={'compound':.0, 'neg':.0, 'neu':.0, 'pos':.0}
+    postwar={'compound':.0, 'neg':.0, 'neu':.0, 'pos':.0}
+
     pre_count = 145
     post_count = 149
     print("Pre War Assessment")
@@ -28,38 +30,39 @@ def main():
         sid = SentimentIntensityAnalyzer()
         print(sentence)
         ss = sid.polarity_scores(sentence)
-
         prewar = dict(Counter(prewar) + Counter(ss))
 
         for k in sorted(ss):
             print('{0}: {1}, '.format(k, ss[k]), end='')
         print()
 
-
     print("Post War Assessment")
+    last = 0
     for sentence in post_para:
         sid = SentimentIntensityAnalyzer()
         print(sentence)
-        ss = sid.polarity_scores(sentence)
+        sd = sid.polarity_scores(sentence)
+        postwar = dict(Counter(postwar) + Counter(sd))
 
-        postwar = dict(Counter(postwar) + Counter(ss))
+        for k in sorted(sd):
+            print('{0}: {1}, '.format(k, sd[k]), end='')
 
-        for k in sorted(ss):
-            print('{0}: {1}, '.format(k, ss[k]), end='')
+        postwar['compound'] = postwar.get('compound', last)
+        last = postwar['compound']
         print()
 
     for key in prewar:
         print(key)
         print(prewar[key])
         prewar[key] = prewar[key] / pre_count
-        
+
     for key in postwar:
         print(key)
         print(postwar[key])
         postwar[key] = postwar[key] / post_count
-
+        
+   
     print("Prewar")
-    prewar.pop('compound')
     for k in sorted(prewar):
         print('{0}: {1}, '.format(k, prewar[k]), end='')
     
