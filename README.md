@@ -49,10 +49,23 @@ Even if I did not quite get the results I wanted. I decided to take what I have 
 some more articles about Ukraine. I have decided to analyze articles including Zelensky, both with sentences
 mentioning him intact and then also removed to determine how positive the media coverage is in the NYT for him. 
 ![Averages from Prewar and Postwar](/results/resultsZel1.png) Now if we take the sentences including Zelensky
-out of the articles, we get this. ![Averages from Prewar and Postwar](/results/resultsZel2.png)
-
+out of the articles, we get this. ![Averages from Prewar and Postwar](/results/resultsZel2.png) For the the first pre-war result, taking Zelensky out of
+the story made the article less negative, while other numbers barely fluctuated.
+For the second pre-war one, it because less positive and negative and more compound.
+For the third one, it remained mostly the same with only a slight decrease in
+positivity<br><br>On the post war side, the first article became more positive and
+more negative. The second one became more negative and less positive. The third
+postwar story became less positive and less negative.
 
 ## Analysis
-
+So overall what did my data say? For Phase 2, it told me that the language surrounding war is negative. If I want to attempt to determine whether or not a story is coming in
+more or less favorably towards one government for a war, I will need a much more complex
+sentiment analyzer that is able to parse language that is reflexive, relative to the different parties involved in the combat.<br><br> For Phase 3, I think I was able to get a cleaner answer. The Prewar articles, when Zelensky was mentioned, did go more negative
+this is in part to the corruption surrounding the government at the time of his election
+Comparably, the postwar articles become less neutral and more positive and sometimes
+more negative. The positivity I would posit is because Western media is very supportive
+of Zelensky. The negative could be coming from the fact that Zelensky in his speeches
+is talking about the war and the bombings of civilians, which as seen in Phase 2, will
+evaluate as more negative.
 ## How to run
 Simple, all it is downloading the necessary nltk packages and running analyze.py as a python file in vs code.
