@@ -51,7 +51,7 @@ mentioning him intact and then also removed to determine how positive the media 
 ![Averages from Prewar and Postwar](/results/resultsZel1.png) Now if we take the sentences including Zelensky
 out of the articles, we get this. ![Averages from Prewar and Postwar](/results/resultsZel2.png) For the the first pre-war result, taking Zelensky out of
 the story made the article less negative, while other numbers barely fluctuated.
-For the second pre-war one, it because less positive and negative and more compound.
+For the second pre-war one, it became less positive and negative and more compound.
 For the third one, it remained mostly the same with only a slight decrease in
 positivity<br><br>On the post war side, the first article became more positive and
 more negative. The second one became more negative and less positive. The third
